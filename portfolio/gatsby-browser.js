@@ -1,0 +1,6 @@
+import "bootstrap/dist/css/bootstrap.min.css"
+import "./src/styles/global.css"
+import "jquery/dist/jquery.min.js"
+import "popper.js/dist/popper.min"
+import "./src/styles/stylish-portfolio.css"
+import "./src/styles/stylish-portfolio.min.css"
