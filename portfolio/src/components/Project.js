@@ -20,7 +20,8 @@ import Link from "@material-ui/core/Link"
 const styles = theme => ({
   card: {
     maxWidth: 400,
-    textAlign: 'center'
+    textAlign: 'center',
+    height: 400
   },
   media: {
     height: 0,
@@ -28,6 +29,7 @@ const styles = theme => ({
   },
   actions: {
     display: "flex",
+    justifyContent: 'center'
   },
   expand: {
     transform: "rotate(0deg)",
@@ -66,10 +68,7 @@ class Project extends React.Component {
           image={image}
           title={title}
         />
-        <CardContent>
-          <Typography component="p">{text}</Typography>
-        </CardContent>
-        <CardActions className={classes.actions} disableActionSpacing>
+          <CardActions className={classes.actions} disableActionSpacing>
         <a target='__blank' href={github}>
           <IconButton aria-label="View Github Repo">
             <GitHubIcon />
@@ -81,6 +80,10 @@ class Project extends React.Component {
           </IconButton>
           </a>
         </CardActions>
+        <CardContent>
+          <Typography component="p">{text}</Typography>
+        </CardContent>
+      
       </Card>
     )
   }

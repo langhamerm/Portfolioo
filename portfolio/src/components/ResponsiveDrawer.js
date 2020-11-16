@@ -26,6 +26,7 @@ const styles = theme => ({
   root: {
     display: "flex",
     justifyContent: "flex-end",
+    
   },
   drawer: {
     [theme.breakpoints.up("sm")]: {
@@ -46,6 +47,7 @@ const styles = theme => ({
     [theme.breakpoints.up("sm")]: {
       display: "inline",
     },
+    position: "fixed"
   },
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
@@ -64,8 +66,13 @@ class ResponsiveDrawer extends React.Component {
     mobileOpen: false,
   }
 
-  handleDrawerToggle = () => {
-    this.setState(state => ({ mobileOpen: !state.mobileOpen }))
+  handleDrawerClose = (e) => {
+    e.preventDefault();
+    this.setState({ mobileOpen: false })
+  }
+
+  handleDrawerOpen = () => {
+    this.setState({ mobileOpen: true })
   }
 
   render() {
@@ -135,7 +142,7 @@ class ResponsiveDrawer extends React.Component {
               variant="temporary"
               anchor={"right"}
               open={this.state.mobileOpen}
-              onClose={this.handleDrawerToggle}
+              onClose={this.handleDrawerClose}
               classes={{
                 paper: classes.drawerPaper,
               }}
@@ -147,14 +154,13 @@ class ResponsiveDrawer extends React.Component {
         <IconButton
           color="inherit"
           aria-label="Open drawer"
-          onClick={this.handleDrawerToggle}
+          onClick={this.handleDrawerOpen}
           className={classes.menuButton}
         >
           <MenuIcon
             style={{
               width: "2em",
               height: "2em",
-              position: "fixed",
             }}
           />
         </IconButton>

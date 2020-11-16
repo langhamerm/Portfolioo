@@ -5,13 +5,14 @@ import { withStyles } from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid"
 
 import ResponsiveDrawer from "../components/ResponsiveDrawer"
-import ImageAvatars from "../components/ImageAvatars"
+// import ImageAvatars from "../components/ImageAvatars"
 import Skills from "../components/Skills"
 import About from "../components/About"
 import Contact from "../components/Contact";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Portfolio from "../components/Portfolio";
+
 
 const styles = theme => ({
   root: {
@@ -35,7 +36,7 @@ function Home(props) {
           <ResponsiveDrawer />
         </Grid>
         <Grid item xs={12} sm={12}>
-          {/* <ImageAvatars /> */}
+    
           <Header />
         </Grid>
             

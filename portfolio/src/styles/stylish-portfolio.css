@@ -668,9 +668,9 @@ a:active {
   color: #ecb807 !important;
 }
 
-#about {
+/* #about {
   height: 60rem;
-}
+} */
 .container {
   max-width: 1170px;
   margin-left: auto;

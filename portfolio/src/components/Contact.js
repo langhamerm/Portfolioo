@@ -60,9 +60,9 @@ class Contact extends React.Component {
     const { classes } = this.props;
 
     return (
-  <section id="contact" className="callout">
+  // <section id="contact" className="callout">
 
-  <div className="container">
+  <div className="container" id="contact">
 
     <div className="wrapper animated bounceInLeft">
       <div className="company-info">
@@ -103,7 +103,7 @@ class Contact extends React.Component {
       </div>
     </div>
   </div>
-</section>
+// </section>
 
     );
   }
